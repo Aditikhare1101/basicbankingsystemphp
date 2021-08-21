@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	 margin: 0;
+	 padding: 0;
+	 font-family: Roboto;
+	 list-style: none;
+	 text-decoration: none;
+	 height: 130px;
+       width: auto;
+}
+
+body{
+	background-color: #e0e0e0;
+}
+
+ul li.home a{
+	background-color: orangered;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+nav{
+	height: 100px;
+	background: #060606;
+	overflow: auto;
+}
+
+.logo{
+	position: absolute;
+	top: 17px;
+	left: 5%;
+    height: 58px;
+    width: 232px;
+} 
+
+nav ul{
+	text-align: center;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin-right: 0 10px;
+	padding: 10px;
+}
+
+nav ul li a{
+	position: relative;
+	color: white;
+	font-size: 18px;
+	padding: 15px 0;
+	text-transform: uppercase;
+	right: -50%;
+}
+
+nav ul li a: before{
+	position: absolute;
+	content: '';
+	height: 5px;	
+	width: 100%;
+	background: white;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+
+.active, .navigationbar:hover{
+	background: orangered;
+	transition: all .5s;
+	border-radius: 10px;
+	color: black;
+	transition: transform all .5s;
+	padding: 10px;
+}
+
+nav ul li a:hover:before{
+	transform: scaleX(2);
+	transform-origin: left;
+}
+
+nav #icon{
+	padding: 5px;
+}
+
+label #btn, label #cancel{
+	color: white;
+	font-size: 30px;
+	float: right;
+	line-height: 80px;
+	margin-right: 70px;
+	cursor: pointer;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+@media (max-width: 1118px){
+	.logo{
+		left: 8%;
+	}
+}
+
+
+@media (max-width: 944px){
+	.logo{
+		left: 6%;
+		top: 20px;
+		width: 130px;
+	}
+	nav ul li a{
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 860px){
+	label #btn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #03a9f4;
+		top: 80px;
+		left: -100%;
+		/*right: 50px;*/
+		text-align: center;
+		transition: all .5s;
+		float: none;
+	}
+	a.active, a:hover{
+	background: black;
+	transition: all .5s;
+	border-radius: 15px;
+	padding: 12px;
+	color: white;
+	}
+	ul li.home a{
+	background-color: black;
+	color: white;
+	padding: 10px;
+	}
+	nav ul li{
+		display: black;
+		margin: 50px 0;
+		line-height: 30px;
+
+	}
+	nav ul li a{
+		font-size: 20px;	
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+	#check:checked ~ label #btn{
+		display: none;
+	}
+	#check:checked ~ label #cancel{
+		display: block
+	}
+}
+
+.cards{
+	width: 25%;
+	display: inline-block;
+	border-radius: 10px;
+	margin: 50px;
+	background-color: grey;
+}
+
+.cards:hover{
+	box-shadow: 2px 2px 20px orangered;
+}
+
+.image img{
+	width: 100%;
+	height: 160px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.image1 img{
+	width: 100%;
+	height: 160px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.image2 img{
+	width: 100%;
+	height: 160px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.des{
+	text-align: center;
+	padding: 10px;
+}
+
+button{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: black;
+	border-radius: 15px;
+	color: white;
+	padding: 13px;
+	cursor: pointer;
+	font-size: 15px solid;
+	font-style: bold;
+	width: 180px;
+    	font-size: 15px solid;
+    	height: 50px;
+}
+
+button:hover{
+	background-color: orangered;
+	color: black;
+	transition: .5s;
+	box-shadow: 5px 5px 10px blue;
+}
+
+#ip1{
+	height: 35px;
+	width: 220px;
+	border-radius: 15px;
+	padding: 5px;
+	border: none;
+	outline: one;
+	border: none;
+      background-color: #e0e0e0;
+      outline: none;
+      font-size: 20px;
+      margin-top: 10px;
+      text-align: center;
+      box-shadow: 5px 5px 10px grey;
+}
+#ip2{
+
+	margin-top: 10px;
+	margin-right: 35px;
+	background-color: orangered;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+	height: 45px;
+	width: 80px;
+	padding: 5px;
+	border-color: blue;
+	outline: one;
+	border-radius: 15px;
+	border: none;
+      outline: none;
+   	font-size: 16px;
+   	box-shadow: skyblue;
+}
+
+
+/*
+ INSERT INTO `customer_report` (`SRNO.`, `GENDER`, `NAME`, `BALANCE`, `MOBILE NO.`, `GMAIL ID`, `ADDRESS`, `DATE_TIME`) VALUES ('1', 'female', 'Aditi Khare', '987654', '9087654321', 'aditikhare@gmail.com', 'Nagpur,India', current_timestamp()), ('2', 'male', 'Arpit Kumar', '897650', '8907654321', 'arpit@gmail.com', 'Pune,India', current_timestamp());
+ INSERT INTO `customer_report` (`SRNO.`, `GENDER`, `NAME`, `BALANCE`, `MOBILE NO.`, `GMAIL ID`, `ADDRESS`, `DATE_TIME`) VALUES ('3', 'male', 'Amit Sharma', '89760', '789065413', 'amit90@gmail.com', 'Delhi,India', current_timestamp()), ('4', 'Female', 'Swati Mishra', '78906', '980234467', 'swatimishra@gmail.com', 'Mumbai,India', current_timestamp());
+ INSERT INTO `customer_report` (`SRNO.`, `GENDER`, `NAME`, `BALANCE`, `MOBILE NO.`, `GMAIL ID`, `ADDRESS`, `DATE_TIME`) VALUES ('4', 'female', 'Arti Sharma', '77789', '8877005640', 'arti45@gmail.com', 'Pune,India', current_timestamp()), ('6', 'male', 'Anil Khare', '890765', '9978065400', 'anilkhare05@gmail.com', 'Pune,India', current_timestamp());
+ INSERT INTO `customer_report` (`SRNO.`, `GENDER`, `NAME`, `BALANCE`, `MOBILE NO.`, `GMAIL ID`, `ADDRESS`, `DATE_TIME`) VALUES ('7', 'Female', 'Aditi Sharma', '8790', '899765412', 'aditi67@gmail.com', 'Hyderabad, India', current_timestamp()), ('8', 'Male', 'Archit Shukla', '789060', '8800765431', 'archit01@gmail.com', 'Pune, India', current_timestamp());
+ INSERT INTO `customer_report` (`SRNO.`, `GENDER`, `NAME`, `BALANCE`, `MOBILE NO.`, `GMAIL ID`, `ADDRESS`, `DATE_TIME`) VALUES ('9', 'Female', 'Swarangi Tathe', '78900', '7890654123', 'swarangi56@gmail.com', 'Nagpur, India', current_timestamp()), ('10', 'Male', 'Sunil Khare', '890768', '9870554632', 'sunil66@gmail.com', 'Mumbai, India', current_timestamp());
+*/
+
